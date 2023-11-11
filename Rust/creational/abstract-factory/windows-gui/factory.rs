@@ -1,12 +1,12 @@
 use gui::{Button, Checkbox, GuiFactory};
 
-use create::{button::WindowsButton, checkbox::WindowsCheckbox};
+use crate::{button::WindowsButton, checkbox::WindowsCheckbox};
 
 pub struct WindowsFactory;
 
 impl GuiFactory for WindowsFactory {
-    type B: WindowsButton;
-    type C :: WindowsCheckbox
+    type B = WindowsButton;
+    type C = WindowsCheckbox;
 
     fn create_button(&self) -> WindowsButton {
         WindowsButton
