@@ -15,3 +15,8 @@ pub trait GuiFactory {
     fn create_button(&self) -> Self::B;
     fn create_checkbox(&self) -> Self::C;
 }
+
+pub trait GuiFactoryDynamic {
+    fn create_button(&self) -> Box<dyn Button>;
+    fn create_checkbox(&self) -> Box<dyn Checkbox>;
+}
